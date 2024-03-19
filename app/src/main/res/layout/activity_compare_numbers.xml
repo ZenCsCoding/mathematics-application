@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".CompareNumbersActivity">
+
+    <!-- Horizontal container for numbers and question mark -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/number1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="65"/>
+
+        <!-- Question mark image -->
+        <!-- Update @drawable/ic_question_mark with your actual drawable resource -->
+
+        <TextView
+            android:id="@+id/textViewPlaceholder"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:gravity="center"
+            android:text="?"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewEqualsSign"
+            app:layout_constraintStart_toEndOf="@+id/textViewPlusSign"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="73"/>
+    </LinearLayout>
+
+    <!-- Your comparison buttons here -->
+    <Button
+        android:id="@+id/greaterThanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/lessThanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/equalToButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
